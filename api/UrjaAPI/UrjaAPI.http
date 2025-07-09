@@ -1,0 +1,6 @@
+@UrjaAPI_HostAddress = http://localhost:5010
+
+GET {{UrjaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
