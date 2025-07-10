@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UrjaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b181305ba5670c07305df6dac7e87d3d766a1a30")]
 [assembly: System.Reflection.AssemblyProductAttribute("UrjaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UrjaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
