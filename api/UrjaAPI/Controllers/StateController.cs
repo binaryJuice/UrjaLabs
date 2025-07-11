@@ -1,38 +1,50 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using UrjaAPI.Model;
+﻿// <copyright file="StateController.cs" company="binaryJuice">
+// Copyright (c) binaryJuice. All rights reserved.
+// </copyright>
 
 namespace UrjaAPI.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using UrjaAPI.Model;
+
+    /// <summary>
+    /// Endpoint for states controller
+    /// </summary>
     [Route("api")]
     [ApiController]
     public class StateController : ControllerBase
     {
-
+        /// <summary>
+        /// Get all endpoint
+        /// </summary>
+        /// <returns>ActionResult<IEnumerable<StateDto>></returns>
         [HttpGet]
         public ActionResult<IEnumerable<StateDto>> Get()
         {
             // why there is no NOT found here, coz empty collections is a collection
             // , it just happens to be a empty list
-            return Ok(StateDataSource.current.State);
+            return Ok(StateDataSource.Current.State);
         }
+
         /// <summary>
-        /// 
+        /// GetStateDetailsById by id , this takes a parameter
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <param name="id">id of the state</param>
+        /// <returns>StateDto</returns>
         [HttpGet("{id}")]
         public ActionResult<StateDto> GetStateDetailsById(int id)
         {
             // linq considerations 
             // http status code =200
-            //var state = StateDataSource.current.State.Where(s => s.Id == id)
+            // var state = StateDataSource.current.State.Where(s => s.Id == id)
 
             // http status code =404
-            var state = StateDataSource.current.State.FirstOrDefault(s => s.Id == id);
-            
-            if (state==null)
-                return NotFound();
+            var state = StateDataSource.Current.State.FirstOrDefault(s => s.Id == id);
+
+            if (state == null)
+            {
+                return this.NotFound();
+            }
             #region HowDoesThisCodeIsImprovedByAddingADataSource
             //return new JsonResult(
             //    new List<object>()
@@ -43,7 +55,8 @@ namespace UrjaAPI.Controllers
             //        new{id=1, State="PA"},
             //    });
             #endregion
-            return Ok(StateDataSource.current.State.Where(s=>s.Id==id));
+
+            return this.Ok(StateDataSource.Current.State.Where(s => s.Id == id));
         }
 
         #region deprecated

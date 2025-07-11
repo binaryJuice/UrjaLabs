@@ -1,21 +1,33 @@
-﻿using System.Xml.Linq;
-using UrjaAPI.Model;
+﻿// <copyright file="StateDataSource.cs" company="binaryjuice">
+// Copyright (c) binaryjuice. All rights reserved.
+// </copyright>
 
 namespace UrjaAPI
 {
+    using UrjaAPI.Model;
+
+    /// <summary>
+    /// Inline data store
+    /// </summary>
     public class StateDataSource
     {
-        public List<StateDto> State { get; set; }
-        public static StateDataSource current { get; } = new StateDataSource();
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StateDataSource"/> class.
+        /// Inline data source for states and its point of interest.
+        /// </summary>
         public StateDataSource()
         {
-            State = new List<StateDto>()
+            this.State = new List<StateDto>()
             {
-                new StateDto() { Id = 1, Name = "PA" },
-                new StateDto() { Id = 2, Name = "PA" },
-                new StateDto() { Id = 3, Name = "PA" },
-                new StateDto() { Id = 4, Name = "PA" }
+                new StateDto() { Id = 1, Name = "PA",PointOfInterestDtos =new List<PointOfInterestDto>(){ new PointOfInterestDto() { Id = 17} } },
+                new StateDto() { Id = 2, Name = "PA",PointOfInterestDtos=new List<PointOfInterestDto>(){ new PointOfInterestDto() { Id = 72 } } },
+                new StateDto() { Id = 3, Name = "PA", PointOfInterestDtos=new List<PointOfInterestDto>(){ new PointOfInterestDto() { Id = 23} } },
+                new StateDto() { Id = 4, Name = "PA",PointOfInterestDtos = new List<PointOfInterestDto>() { new PointOfInterestDto() { Id = 26} } } ,
             };
         }
+
+        public static StateDataSource Current { get; } = new StateDataSource();
+
+        public List<StateDto> State { get; set; }
     }
 }
