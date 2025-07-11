@@ -32,3 +32,4 @@ D:\L2E\binaryJuiceLabs\UrjaBroker\api\UrjaAPI\obj\Debug\net8.0\UrjaAPI.pdb
 D:\L2E\binaryJuiceLabs\UrjaBroker\api\UrjaAPI\obj\Debug\net8.0\UrjaAPI.genruntimeconfig.cache
 D:\L2E\binaryJuiceLabs\UrjaBroker\api\UrjaAPI\obj\Debug\net8.0\ref\UrjaAPI.dll
 D:\L2E\binaryJuiceLabs\UrjaBroker\api\UrjaAPI\obj\Debug\net8.0\UrjaAPI.sourcelink.json
+D:\L2E\binaryJuiceLabs\UrjaBroker\api\UrjaAPI\bin\Debug\net8.0\stylecop.json
