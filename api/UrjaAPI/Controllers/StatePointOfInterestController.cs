@@ -6,7 +6,7 @@
     /// <summary>
     /// Controller is about number of business interest , in a state
     /// </summary>
-    [Route("api/city/{stateid}/pointofinterest")]
+    [Route("api/city/{cityid}/pointofinterest")]
     [ApiController]
     public class StatePointOfInterestController : ControllerBase
     {
