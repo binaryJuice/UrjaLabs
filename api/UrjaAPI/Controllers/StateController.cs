@@ -15,30 +15,30 @@ namespace UrjaAPI.Controllers
     public class StateController : ControllerBase
     {
         /// <summary>
-        /// Get all endpoint
+        /// Get all endpoint.
         /// </summary>
-        /// <returns>ActionResult<IEnumerable<StateDto>></returns>
+        /// <returns>ActionResult.<IEnumerable<StateDto>></returns>
         [HttpGet]
-        public ActionResult<IEnumerable<StateDto>> Get()
+        public ActionResult<IEnumerable<StateDto>> GetAllStates()
         {
             // why there is no NOT found here, coz empty collections is a collection
             // , it just happens to be a empty list
-            return Ok(StateDataSource.Current.State);
+            return this.Ok(StateDataSource.Current.State);
         }
 
         /// <summary>
-        /// GetStateDetailsById by id , this takes a parameter
+        /// GetStateDetailsById by id , this takes a parameter.
         /// </summary>
-        /// <param name="id">id of the state</param>
-        /// <returns>StateDto</returns>
+        /// <param name="id">id of the state.</param>
+        /// <returns>StateDto.</returns>
         [HttpGet("{id}")]
         public ActionResult<StateDto> GetStateDetailsById(int id)
         {
-            // linq considerations 
-            // http status code =200
-            // var state = StateDataSource.current.State.Where(s => s.Id == id)
+            // linq considerations.
+            // http status code =200.
+            // var state = StateDataSource.current.State.Where(s => s.Id == id).
 
-            // http status code =404
+            // http status code =404.
             var state = StateDataSource.Current.State.FirstOrDefault(s => s.Id == id);
 
             if (state == null)

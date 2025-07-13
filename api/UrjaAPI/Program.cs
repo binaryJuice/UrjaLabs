@@ -1,16 +1,34 @@
-using Microsoft.Extensions.Options;
+// <copyright file="Program.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+#pragma warning disable SA1124 // Do not use regions
 #region CodingObservation relevant to core framework
+
 // manually added the controllers folder , and the controller class
 #endregion
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.ReturnHttpNotAcceptable=true;
+}).AddXmlDataContractSerializerFormatters();
+
+#pragma warning restore SA1124 // Do not use regions
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// configuring the problem details
+builder.Services.AddProblemDetails(options =>
+{
+    options.CustomizeProblemDetails = ctx =>
+    {
+        ctx.ProblemDetails.Extensions.Add("ServerName", Environment.MachineName);
+    };
+});
 
 var app = builder.Build();
 
@@ -24,6 +42,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+#pragma warning disable SA1124 // Do not use regions
 #region CodingObservation relevant to core framework
 // warning ASP0014: Suggest using top level route registrations instead of UseEndpoints (https://aka.ms/aspnet/analyzers) [D:\L2E\binaryJuiceLabs\UrjaBroker\api\UrjaAPI\UrjaAPI.
 //csproj]
@@ -31,6 +51,7 @@ app.UseAuthorization();
 //app.UseEndpoints(endpoints =>endpoints.MapControllers());
 #endregion
 app.MapControllers();
+#pragma warning restore SA1124 // Do not use regions
 
 #region defaultCodeCommented
 
