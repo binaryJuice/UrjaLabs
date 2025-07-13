@@ -1,6 +1,6 @@
 ﻿namespace UrjaAPI.Model
 {
-    public class PointOfInterestDto
+    public class StatePointOfInterestDto
     {
         public int Id { get; set; }
         #region WhyThisQuestinMark
