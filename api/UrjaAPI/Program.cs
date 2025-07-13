@@ -1,5 +1,6 @@
-using Microsoft.Extensions.Options;
-using System.Net.Sockets;
+// <copyright file="Program.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 var builder = WebApplication.CreateBuilder(args);
 
