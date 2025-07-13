@@ -19,10 +19,10 @@ namespace UrjaAPI
         {
             this.State = new List<StateDto>()
             {
-                new StateDto() { Id = 1, Name = "PA",PointOfInterestDtos =new List<PointOfInterestDto>(){ new PointOfInterestDto() { Id = 17} } },
-                new StateDto() { Id = 2, Name = "PA",PointOfInterestDtos=new List<PointOfInterestDto>(){ new PointOfInterestDto() { Id = 72 } } },
-                new StateDto() { Id = 3, Name = "PA", PointOfInterestDtos=new List<PointOfInterestDto>(){ new PointOfInterestDto() { Id = 23} } },
-                new StateDto() { Id = 4, Name = "PA",PointOfInterestDtos = new List<PointOfInterestDto>() { new PointOfInterestDto() { Id = 26} } } ,
+                new StateDto() { Id = 1, Name = "PA", PointOfInterestDtos =new List<StatePointOfInterestDto>() { new StatePointOfInterestDto() { Id = 17 } } },
+                new StateDto() { Id = 2, Name = "PA", PointOfInterestDtos=new List<StatePointOfInterestDto>() { new StatePointOfInterestDto() { Id = 72 } } },
+                new StateDto() { Id = 3, Name = "PA", PointOfInterestDtos=new List<StatePointOfInterestDto>() { new StatePointOfInterestDto() { Id = 23 } } },
+                new StateDto() { Id = 4, Name = "PA", PointOfInterestDtos = new List<StatePointOfInterestDto>() { new StatePointOfInterestDto() { Id = 26 } } },
             };
         }
 

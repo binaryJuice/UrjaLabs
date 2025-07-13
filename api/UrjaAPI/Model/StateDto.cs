@@ -15,7 +15,7 @@
         // Name of the state.
         public string? Name { get; set; }
 
-        public ICollection<PointOfInterestDto> PointOfInterestDtos { get; set; } = new List<PointOfInterestDto>();
+        public ICollection<StatePointOfInterestDto> PointOfInterestDtos { get; set; } = new List<StatePointOfInterestDto>();
 
         public int CountPointOfInterest
         {

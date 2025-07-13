@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UrjaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31f1233937e411938bcf8b9f7876d4df9e603ef6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+756d1352b2a9e6032549b46e5bc2ff7817de9f99")]
 [assembly: System.Reflection.AssemblyProductAttribute("UrjaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UrjaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
