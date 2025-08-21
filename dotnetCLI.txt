@@ -1,0 +1,1 @@
+D:\L2E\binaryJuiceLabs\UrjaBroker\Common>dotnet new classlib -n BinaryJuiceHttpClient
